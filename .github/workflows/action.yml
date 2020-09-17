@@ -7,8 +7,6 @@ name: CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,21 +19,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        
       - name: Setup Node.js environment
         uses: actions/setup-node@v2-beta
-  with:
-    version: 12
-    key: 
-     - name: GitHub Action for Yarn
-       uses: Borales/actions-yarn@v2.3.0
-       with:
+        with:
+         version: 12
+         
+      - name: GitHub Action for Yarn
+        uses: Borales/actions-yarn@v2.3.0
+        with:
     # Yarn command
            cmd: install # npm install/ yarn install
     
-     - name: creating build
-       run: npm build
-     - name: installing surge
-       run: npm install -g surge
+      - name: creating build
+        run: npm build
+      - name: installing surge
+        run: npm install -g surge
       
-     - name: deploying on surge
-       run: surge ./build http://http://wasiclass.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+      - name: deploying on surge
+        run: surge ./build http://http://wasiclass.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
