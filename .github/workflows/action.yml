@@ -35,6 +35,6 @@ jobs:
         run: npm build
       - name: installing surge
         run: npm install -g surge
-      
+      # error ./build not found
       - name: deploying on surge
         run: surge ./build http://wasiclass.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
