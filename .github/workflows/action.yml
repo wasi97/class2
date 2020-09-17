@@ -30,12 +30,12 @@ jobs:
        uses: Borales/actions-yarn@v2.3.0
        with:
     # Yarn command
-    cmd: install # npm install/ yarn install
+           cmd: install # npm install/ yarn install
     
-    - name: creating build
-     run: npm build
-    - name: installing surge
-      run: npm install -g surge
+     - name: creating build
+       run: npm build
+     - name: installing surge
+       run: npm install -g surge
       
-      - name: deploying on surge
-        run: surge ./build http://http://wasiclass.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+     - name: deploying on surge
+       run: surge ./build http://http://wasiclass.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
