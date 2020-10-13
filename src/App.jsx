@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import BasicTextFields from './components/textfield'
+
+
 // class Header extends Component{
 //   render(){
 //     return(
@@ -32,6 +35,7 @@ class App extends React.Component{
     <div>
       <Header/>
     <h1>main Component</h1>
+    <BasicTextFields/>
     <button type="button" className="btn btn-primary">Primary</button>
     <Footer/>
        </div>
