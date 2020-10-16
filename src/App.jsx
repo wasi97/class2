@@ -28,13 +28,15 @@ import BasicTextFields from './components/textfield'
 
 
 class App extends React.Component{
+  constructor(){
+    super()
+  }
   render(){
    
     return(
       
     <div>
       <Header/>
-      <Logo/>
     <h1>main Component</h1>
     <BasicTextFields/>
     <button type="button" className="btn btn-primary">Primary</button>
