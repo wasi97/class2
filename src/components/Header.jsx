@@ -4,10 +4,14 @@ import LOGOIMAGE from '../images/logo.jpg'
 
 class Header extends React.Component{
     render(){
+      console.log("props==>",this.props)
         return(
             <div className="header">
                  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Logo/>
+       
+        <Logo/> <button onClick={()=>this.props.get_props("auto")}>Send</button>
+
+
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
