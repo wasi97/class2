@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from "./components/Header"
+import {Header, Logo} from "./components/Header"
 import Footer from "./components/Footer"
 import BasicTextFields from './components/textfield'
 
@@ -34,6 +34,7 @@ class App extends React.Component{
       
     <div>
       <Header/>
+      <Logo/>
     <h1>main Component</h1>
     <BasicTextFields/>
     <button type="button" className="btn btn-primary">Primary</button>
